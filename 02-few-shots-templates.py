@@ -12,6 +12,7 @@ print(prompt.text)
 
 examples = [
     {"question": "What is the capital of France?", "answer": "Paris"},
+    {"question": "What is the capital of Argentina?", "answer": "Cordoba"},
     {"question": "What is the capital of Germany?", "answer": "Berlin"},
     {"question": "What is the capital of Italy?", "answer": "Rome"},
     {"question": "What is the capital of Spain?", "answer": "Madrid"},
@@ -40,8 +41,11 @@ llm = LLMFactory.create_llm(
 )
 
 llm_chain = prompt_template | llm
-response = llm_chain.invoke({"input": "¿Cuál es la capital de Francia?"})
-print("Response:")
+question = "Basado en los ejemplos, ¿cuál es la capital de Argentina?"
+response = llm_chain.invoke({"input": question})
+print("Question llm_chain:")
+print(question)
+print("Answer llm_chain:")
 print(response.content)
 
 # Codigos de ejemplos
