@@ -37,6 +37,20 @@ python 01-prompt-template.py
 - Usa el factory para crear un LLM (OpenAI o Gemini)
 - Ejecuta una pregunta de ejemplo y muestra la respuesta
 
+### `02-few-shots-templates.py`
+Ejemplo de few-shot learning con plantillas de prompts usando LangChain.
+
+**Ejecutar:**
+```bash
+python 02-few-shots-templates.py
+```
+
+**Qué hace:**
+- Carga variables de entorno desde `.env`
+- Crea ejemplos few-shot con `FewShotPromptTemplate`
+- Usa el factory para crear un LLM (OpenAI o Gemini)
+- Ejecuta preguntas con ejemplos de contexto para mejorar las respuestas
+
 ---
 
 *Este README se actualizará automáticamente cuando se agreguen nuevos archivos al proyecto.*
